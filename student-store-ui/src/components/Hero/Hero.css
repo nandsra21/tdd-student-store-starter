@@ -1,0 +1,27 @@
+.hero {
+    margin-top: 45px;
+    background-color: white;
+    height: 340px;
+    padding-bottom: 45px;
+    box-sizing: content-box;
+}
+.intro {
+    margin-left: 10px;
+}
+.hero-img {
+    float:right
+}
+.hero h1 {
+    font-size: 60px;
+}
+.hero p {
+    font-size: 30px;
+}
+.hero img {
+    width: 200px;
+    height: 200px;
+    margin-top: -350px;
+    margin-left: 1300px;
+    z-index: 100;
+    position: absolute;
+}

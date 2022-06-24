@@ -1,0 +1,27 @@
+.navbar {
+  list-style-type: none;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background-color: #b1b5ba;
+  display: flex;
+  justify-content: flex-end;
+}
+#nav-button {
+  display: block;
+  color: #3e8e41;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float:left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 25px;
+  font-size: 20px;
+}
+#nav-button:hover {
+  background-color: #04AA6D;
+}
+.surround {
+
+}

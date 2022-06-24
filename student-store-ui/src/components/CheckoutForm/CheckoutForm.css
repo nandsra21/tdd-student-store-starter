@@ -1,0 +1,38 @@
+.hidden {
+    display: none;
+}
+  #submit-button{
+    /* display: grid; */
+    grid-template-columns: repeat(5,1fr);
+    background-color: #e3edf7; 
+    border: 1px solid green; 
+    color: black; 
+    margin-top: 20px;
+    padding: 10px 24px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .message {
+    background-color: #e3edf7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:10px;
+    margin-top: 5mm;
+    font-size: larger;
+    color: black; 
+  }
+  
+  .submit-button button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Clear floats (clearfix hack) */
+  #submit-button:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Add a background color on hover */
+  #submit-button button:hover {
+    background-color: #3e8e41;
+  }
