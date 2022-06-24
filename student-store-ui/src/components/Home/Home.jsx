@@ -5,7 +5,6 @@ import ProductGrid from "../ProductGrid/ProductGrid.jsx"
 import Sidebar from "../Sidebar/Sidebar.jsx"
 import "./Home.css"
 
-// products, handleAddItemToCart, handleRemoveItemToCart
 export default function Home(props) {
   return (
     <><div className="home">

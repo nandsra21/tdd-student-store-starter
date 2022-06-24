@@ -5,6 +5,9 @@ import { useState } from "react"
 export default function ProductGrid(props) {
     const [buttonFilter, setButtonFilter] = useState("All Categories")
     const [searchState, setSearchState] = useState("")
+
+    // filter function: returns true for all categories 
+    // or if the category matches the button pressed
     function filterArray(item) {
       if (buttonFilter === "All Categories") {
         return true
@@ -12,6 +15,7 @@ export default function ProductGrid(props) {
          return buttonFilter === item.category
       }
     }
+    // filters search based on if the item contains the searched substring
     function filterSearch(item) {
       return (item.name + "").toLowerCase().includes((searchState + "").toLowerCase())
     }
@@ -31,7 +35,6 @@ export default function ProductGrid(props) {
         </div>
       </div>
       </div>
-      {/* <input placeholder="Search" onChange={(event) => {setSearchState(event.target.value)}} input="text"></input> */}
       <div className="buttons">
         <button onClick={() => {setButtonFilter("All Categories")}}>All Categories</button>
         <button onClick={() => {setButtonFilter("clothing")}}>Clothing</button>

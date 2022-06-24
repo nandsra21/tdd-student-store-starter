@@ -2,7 +2,6 @@
     display: none;
 }
   #submit-button{
-    /* display: grid; */
     grid-template-columns: repeat(5,1fr);
     background-color: #e3edf7; 
     border: 1px solid green; 

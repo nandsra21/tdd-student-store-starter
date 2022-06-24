@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom"
 import ProductCard from "../ProductCard/ProductCard"
 
 export default function ProductView(props) {
-// handleAddItemToCart
-// handleRemoveItemToCart
     return (
       <div className="product-view">
         <h1>Product # {props.productId}</h1>

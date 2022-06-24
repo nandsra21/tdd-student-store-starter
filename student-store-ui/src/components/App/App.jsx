@@ -13,7 +13,6 @@ import Footer from "../Footer/Footer"
 
 
 export default function App() {
-  let totalPrice = 0
   const [products, setSelectedProducts] = useState([])
   const [isFetching, setIsFetching] = useState(false)
   const [error, setError] = useState("")
@@ -21,14 +20,16 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = useState([])
   const [checkoutForm, setCheckoutForm] = useState({name:"", email:""})
   const [message, setMessage] = useState("")
-console.log(shoppingCart)
+
+  // toggle sidebar 
   function handleOnToggle() {
     setIsOpen(!isOpen)
   }
 
+  // adding item to cart. Adds to existing
+  // if the quantity is greater than 0
+  // or adds a new object to the array
   function handleAddItemToCart(productId) {
-    // {id: productId, value: 1}
-    // cart[0].value += 1
     let findIndex = -1
     shoppingCart.forEach((value, i) => {
       if(value.itemId === productId) { findIndex = i}
@@ -43,6 +44,8 @@ console.log(shoppingCart)
     }
   }
 
+  // removes item from shopping cart. If quantity
+  // is 0, removes item from cart completely.
   function handleRemoveItemFromCart(productId) {
     let findIndex = -1
     shoppingCart.forEach((value, i) => {
@@ -60,26 +63,25 @@ console.log(shoppingCart)
     }
   }
 
+  // updates checkout form with the changed values (email or name)
   function handleOnCheckoutFormChange(name, value) {
-      console.log(name)
       let tempCheck = {...checkoutForm}
       tempCheck[name] = value
-      console.log(tempCheck[name])
       setCheckoutForm(tempCheck)
 
   }
 
+  // posts users checkout to the api and returns the error/success message
   async function handleOnSubmitCheckoutForm(checkoutForm, shoppingCart) {
     let response = await axios.post(`https://codepath-store-api.herokuapp.com/store`,{user:checkoutForm, shoppingCart:shoppingCart})
-    .catch((err) => {console.log(err); setMessage(err.response.data.error.message); setError(err); return;})
+    .catch((err) => {setMessage(err.response.data.error.message); setError(err); return;})
     setMessage("Success! " + response.data.purchase.receipt.lines.join(" ") + "!")
   }
 
+  // fetches data from api to display
   async function fetchData() {
     const response = await axios.get(`https://codepath-store-api.herokuapp.com/store`).catch((err) => setError(err))
-    // setData(response)
     setSelectedProducts(response.data.products)
-    // setisFetching(false)
   }
   React.useEffect(()=>{
     fetchData()

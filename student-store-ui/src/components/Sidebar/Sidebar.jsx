@@ -5,7 +5,7 @@ import ShoppingCart from "../ShoppingCart/ShoppingCart"
 
 export default function Sidebar(props) {
   
-  let icons =    <>  <i className= "fa-solid fa-house icon"></i><i className="fa-solid fa-cart-shopping icon"></i></> 
+  let icons = <> <i className= "fa-solid fa-house icon"></i><i className="fa-solid fa-cart-shopping icon"></i></> 
   return (
 
     <div className={`sidebar ${props.isOpen ? 'expanded':""}`}>

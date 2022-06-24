@@ -10,6 +10,8 @@ export default function ProductDetail(props) {
     const params = useParams();
     const [productState, setProductState] = useState({})
 
+    // figure out the quantity to show for the productId
+    // empty string with a 0 quantity or shows quantity
     function findQuantity(productId) {
         let findIndex = -1
         props.shoppingCart.forEach((value, i) => {
@@ -18,6 +20,7 @@ export default function ProductDetail(props) {
         return (findIndex === -1 || props.shoppingCart[findIndex].quantity === 0)  ? "" : props.shoppingCart[findIndex].quantity
     }
 
+    // getting data for the specific product that has been clicked on
     async function getData() {
         props.setIsFetching(true)
         let response = await axios.get(`https://codepath-store-api.herokuapp.com/store/${params.productId}`).catch((err) => props.setError(err))

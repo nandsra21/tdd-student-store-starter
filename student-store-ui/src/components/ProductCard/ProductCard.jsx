@@ -1,11 +1,11 @@
 import * as React from "react"
-import { useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./ProductCard.css"
 
 export default function ProductCard(props) {
-// handleAddItemToCart
-// handleRemoveItemToCart
+
+    // figure out the quantity to show for the productId
+    // empty string with a 0 quantity or shows quantity
     function findQuantity(productId) {
         let findIndex = -1
         props.shoppingCart.forEach((value, i) => {
@@ -37,4 +37,3 @@ export default function ProductCard(props) {
       </div>
     )
   }
-  //<ProductCard product={props.product} showDescription={true}></ProductCard>

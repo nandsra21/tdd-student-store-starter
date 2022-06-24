@@ -2,6 +2,7 @@ import * as React from "react"
 import "./ShoppingCart.css"
 
 export default function ShoppingCart(props) {
+    // get total price of everything in shopping cart
     function totalPrice() {
         let totalPrice = 0
         props.shoppingCart.forEach(item => {
