@@ -6,6 +6,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 ![partOneStudentStore](https://user-images.githubusercontent.com/40477441/175698321-87742df8-421c-48d3-a06c-89f70f1636bd.gif)
 ![partTwoStudentStore](https://user-images.githubusercontent.com/40477441/175698328-6d4fb955-a4b5-4e98-bd52-d863921878c2.gif)
 ![partThreeStudentStore](https://user-images.githubusercontent.com/40477441/175698341-da6a3325-11b0-45e4-a17e-1bfdd9e0e0af.gif)
+![partFourStudentStore](https://user-images.githubusercontent.com/40477441/175699142-f00d6fe4-615f-4e11-ba74-a01dbbb127c9.gif)
 
 
 
