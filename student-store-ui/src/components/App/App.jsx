@@ -3,7 +3,6 @@ import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
 import { BrowserRouter, Route, Routes} from "react-router-dom"
-import ReactDOM from "react-dom";
 import { useState } from "react"
 import NotFound from "../NotFound/NotFound"
 import axios from "axios"

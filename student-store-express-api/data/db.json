@@ -145,5 +145,40 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "id": 0,
+      "name": "Sravani",
+      "email": "abc@gmail.com",
+      "total": "2.71",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "Tue Jun 28 2022 14:04:05 GMT-0700 (Pacific Daylight Time)"
+    },
+    {
+      "id": 1,
+      "name": "Sravani",
+      "email": "abc@gmail.com",
+      "total": "2.71",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "Tue Jun 28 2022 14:08:31 GMT-0700 (Pacific Daylight Time)"
+    }
+  ]
 }
